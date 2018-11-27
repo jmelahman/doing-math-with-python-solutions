@@ -29,11 +29,12 @@ if __name__ == '__main__':
 		f = sympify(f)
 	except SympifyError:
 		print('Invalid function entered')
-
-	var = Symbol(var)
-
-	is_cont = check_cont(var0, f, var)
-	if is_cont:
-		print('{0} is continuous at {1}'.format(f, var0))
 	else:
-		print('{0} is not continuous at {1}'.format(f, var0))
+
+        	var = Symbol(var)
+        
+        	is_cont = check_cont(var0, f, var)
+        	if is_cont:
+        		print('{0} is continuous at {1}'.format(f, var0))
+        	else:
+        		print('{0} is not continuous at {1}'.format(f, var0))
