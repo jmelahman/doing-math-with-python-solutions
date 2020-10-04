@@ -31,7 +31,10 @@ def even_odd(num):
 def even_odd_unnecessary(num):
     # Same function as even_odd but with unnecessary print() formatting just
     # because
-    print("even") if num % 2 == 0 else print("odd")
+    if num % 2 == 0:
+        print("even")
+    else:
+        print("odd")
     for i in range(0, 18, 2):
         print(num + i, sep='', end=', ', flush=True)
     print(num + 18, sep='', end='.\n', flush=False)
