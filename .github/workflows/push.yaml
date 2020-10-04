@@ -16,6 +16,6 @@ jobs:
           pip install -r requirements.txt
       - name: Lint python
         run: >-
-          pylint --fail-under=5.98 *.py
+          pylint --fail-under=6.00 *.py
 
 

@@ -19,7 +19,10 @@ Solution by Jamison Lahman, October 24, 2018
 
 
 def even_odd(num):
-    print("even") if num % 2 == 0 else print("odd")
+    if num % 2 == 0:
+        print("even")
+    else:
+        print("odd")
     for i in range(0, 20, 2):
         print(num + i)
     return()
