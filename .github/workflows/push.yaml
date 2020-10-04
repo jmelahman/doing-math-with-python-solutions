@@ -13,9 +13,9 @@ jobs:
       - name: Install deps
         run: >-
           python -m pip install --upgrade pip &&
-          pip install pylint==2.6.0
+          pip install -r requirements.txt
       - name: Lint python
         run: >-
-          pylint --fail-under=4.22 *.py
+          pylint --fail-under=5.98 *.py
 
 

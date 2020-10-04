@@ -23,8 +23,7 @@ Doing Math with Python by Amit Saha
 Solution by Jamison Lahman, November 18, 2018
 """
 import matplotlib.pyplot as plt
-#from matplotlib_venn import venn2
-# I don't have scipy installed on my machine
+from matplotlib_venn import venn2
 from sympy import FiniteSet
 import csv
 
