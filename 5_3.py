@@ -14,14 +14,17 @@ Solution by Jamison Lahman, November 18, 2018
 import random
 
 if __name__ == '__main__':
-    hand  = float(input('Enter your starting amount: '))
+    hand = float(input('Enter your starting amount: '))
     count = 0
     while hand > 0:
         count += 1
-        if random.randint(0,1) == 1:
+        if random.randint(0, 1) == 1:
             hand -= 1.5
             print('Tails! Current amount: {0}'.format(hand))
         else:
             hand += 1
             print('Heads! Current amount: {0}'.format(hand))
-    print ('Game over :( Current amount: {0}. Coin tosses: {1}'.format(hand,count))
+    print(
+        'Game over :( Current amount: {0}. Coin tosses: {1}'.format(
+            hand,
+            count))

@@ -1,0 +1,5 @@
+matplotlib
+matplotlib_venn
+sympy
+# Tooling
+pylint==2.6.0

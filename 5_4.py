@@ -16,23 +16,40 @@ Solution by Jamison Lahman, November 23, 2018
 """
 import random
 
+
 class Card:
-    def __init__(self,suit,rank):
+    def __init__(self, suit, rank):
         self.suit = suit
         self.rank = rank
 
+
 def initialize_deck():
     deck = []
-    suits = ['clubs','diamonds','hearts','spades']
-    ranks = ['2','3','4','5','6','7','8','9','10','jack','queen','king','ace',]
+    suits = ['clubs', 'diamonds', 'hearts', 'spades']
+    ranks = [
+        '2',
+        '3',
+        '4',
+        '5',
+        '6',
+        '7',
+        '8',
+        '9',
+        '10',
+        'jack',
+        'queen',
+        'king',
+        'ace',
+    ]
     for suit in suits:
         for rank in ranks:
-            card  = Card(suit,rank)
+            card = Card(suit, rank)
             deck.append(card)
     return deck
+
 
 if __name__ == '__main__':
     deck = initialize_deck()
     random.shuffle(deck)
     for card in deck:
-        print('{0} of {1}'.format(card.rank,card.suit))
+        print('{0} of {1}'.format(card.rank, card.suit))

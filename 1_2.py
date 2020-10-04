@@ -7,12 +7,15 @@ Doing Math with Python by Amit Saha
 
 Solution by Jamison Lahman, November 17, 2018
 """
+
+
 def enhanced_multi_table(a, end_mult):
-    for i in range(1,int(end_mult)+1):
-        print('{0} x {1} = {2}'.format(a,i,a*i))
+    for i in range(1, int(end_mult) + 1):
+        print('{0} x {1} = {2}'.format(a, i, a * i))
     return()
+
 
 if __name__ == '__main__':
     a = input('Enter a number: ')
     b = input('Enter the last multiple: ')
-    enhanced_multi_table(float(a),b)
+    enhanced_multi_table(float(a), b)
