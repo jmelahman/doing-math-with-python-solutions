@@ -1,0 +1,19 @@
+name: Pylint
+
+# Run this workflow every time a new commit pushed to your repository
+on: push
+
+jobs:
+  super-lint:
+    name: Lint python
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: GitHub Action for pylint
+        uses: cclauss/GitHub-Action-for-pylint@0.7.0
+        env:
+          DEFAULT_BRANCH: main
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
