@@ -14,12 +14,11 @@ from sympy.core.sympify import SympifyError
 
 if __name__ == '__main__':
     expr = input('Enter the first expression: ')
-    
+
     try:
         expr = sympify(expr)
     except SympifyError:
         print('Invalid input')
 
-    
     factors = factor(expr)
     pprint(factors)

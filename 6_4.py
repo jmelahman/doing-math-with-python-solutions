@@ -13,6 +13,7 @@ import matplotlib.pyplot as plt
 import matplotlib.cm as cm
 import random
 
+
 def initialize_image(x_p, y_p):
     image = []
     for i in range(y_p):
@@ -22,36 +23,37 @@ def initialize_image(x_p, y_p):
         image.append(x_colors)
     return image
 
+
 def color_mandelbrot():
-    x0, x1 = -2.5,1.0
-    y0, y1 = -1.0,1.0
+    x0, x1 = -2.5, 1.0
+    y0, y1 = -1.0, 1.0
     x_p = 400
     y_p = 400
     max_iteration = 1000
-    
+
     image = initialize_image(x_p, y_p)
-    
-    dx = (x1-x0)/(x_p-1)
-    dy = (y1-y0)/(y_p-1)
-    x = [x0 + i*dx for i in range(x_p)]
-    y = [y0 + i*dy for i in range(y_p)]
-  
-    
+
+    dx = (x1 - x0) / (x_p - 1)
+    dy = (y1 - y0) / (y_p - 1)
+    x = [x0 + i * dx for i in range(x_p)]
+    y = [y0 + i * dy for i in range(y_p)]
+
     for k, xk in enumerate(x):
         for i, yi in enumerate(y):
-            z = complex(0,0)
-            c = complex(xk,yi)
+            z = complex(0, 0)
+            c = complex(xk, yi)
             iteration = 0
-            while (iteration < max_iteration and abs(z) < 2): 
+            while (iteration < max_iteration and abs(z) < 2):
                 iteration += 1
-                z = z**2+c
-            
+                z = z**2 + c
+
             image[i][k] = iteration
-    
-    plt.imshow(image,origin='lower', extent=(x0,x1,y0,y1), cmap=cm.Greys_r,
+
+    plt.imshow(image, origin='lower', extent=(x0, x1, y0, y1), cmap=cm.Greys_r,
                interpolation='nearest')
     plt.colorbar()
     plt.show()
-    
+
+
 if __name__ == '__main__':
     color_mandelbrot()
