@@ -25,7 +25,6 @@ def even_odd(num):
         print("odd")
     for i in range(0, 20, 2):
         print(num + i)
-    return()
 
 
 def even_odd_unnecessary(num):
@@ -38,7 +37,6 @@ def even_odd_unnecessary(num):
     for i in range(0, 18, 2):
         print(num + i, sep='', end=', ', flush=True)
     print(num + 18, sep='', end='.\n', flush=False)
-    return()
 
 
 if __name__ == '__main__':
