@@ -69,13 +69,13 @@ if __name__ == '__main__':
     choice = input('Which conversion would you like to do?: ')
     if choice == '1':
         km_mi()
-    if choice == '2':
+    elif choice == '2':
         mi_km()
-    if choice == '3':
+    elif choice == '3':
         c_f()
-    if choice == '4':
+    elif choice == '4':
         f_c()
-    if choice == '5':
+    elif choice == '5':
         kg_lbs()
-    if choice == '6':
+    elif choice == '6':
         lbs_kg()
