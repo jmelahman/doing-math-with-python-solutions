@@ -2,4 +2,4 @@ matplotlib
 matplotlib_venn
 sympy
 # Tooling
-pylint==2.6.0
+pylint==4.0.9
